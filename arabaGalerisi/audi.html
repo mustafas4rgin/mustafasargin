@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDI</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+       .giris{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        margin-left: 90px;
+        
+       }
+       .thumbnail img {
+        margin-top: 50px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+
+  .thumbnail:hover img {
+    transform: translateY(-10px); 
+  }
+        h5{
+            color: black;
+        }
+        p{
+          font-size: large;
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        .solsutun{
+            width: 100%;
+            height: 500px;
+            background-color: aquamarine;
+            
+        }
+        body.darkmode{
+            background-color:rgba(51, 53, 61, 0.578);
+            color: #fff;
+        }
+        body {
+    overflow-x: hidden; 
+}
+        header{
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            text-align: center;
+            background-color: rgb(243, 243, 243);
+            position: -webkit-sticky;
+      position: sticky;
+      top: 0; 
+      z-index: 1020; 
+            margin-top: 20px;
+        
+        }
+        .gallery-img {
+      cursor: pointer;
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
+      width: 300px; 
+      height: 300px; 
+      object-fit: cover; 
+      overflow: hidden; 
+    }
+
+    .gallery-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 16px rgba(255, 0, 0, 0.2);
+    }
+    .gallery-img-container:hover .gallery-caption {
+      opacity: 1;
+    }
+        
+      #normalLink{
+        color: black;
+      }
+      .caption{
+        font-family: 'Times New Roman', Times, serif;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: black;
+        padding: 10px;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+      }
+      
+    </style>
+</head>
+<body class="darkmode">
+    <header id="baslik">
+        <ul class="nav nav-underline justify-content-center">
+            
+            <li class="nav-item">
+            <a href="#audi"><img src="images/Audi-Logo.png" width="50" height="50"></a><a class="nav-link active" id="normalLink" href="audi.html">Audi</a>
+              </li>
+              <li class="nav-item">
+                <a href="#merco"><img src="images/mercedes.svg.png" width="50" height="50"></a><a class="nav-link" id="normalLink" href="mercedes.html">Mercedes</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html"><img src="images/logo.jpg" width="50"></a><a class="nav-link" id="normalLink" aria-current="page" href="index.html">Ana Sayfa</a>
+            </li>
+              <li class="nav-item">
+                <a href="#bmw"><img src="images/bmw-logo.png" width="50"></a><a class="nav-link" id="normalLink" href="bmw.html">BMW</a>
+              </li>
+              <li class="nav-item">
+                <a href="#honda"><img src="images/honda-logo.png" width="60"><a class="nav-link" id="normalLink" href="honda.html">Honda</a>
+              </li>            
+          </ul>
+          </header>
+          <div class="container mt-5" id="gallery-container">
+            
+          </div>
+          
+          
+          <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="images/Audi/audi1.jpg" alt="Resim Detayı" class="img-fluid">
+                  
+                  <div class="caption"></div><p><b>Audi A1 Quattro</b></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi2.jpg" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A2 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi3.jpg" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A3 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi4.jpg"Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A4 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi5.jpg"Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A5 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi6.jpg" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A6 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi7.jpg" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A7 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="modal fade" id="Modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi8.jpg" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi A8 Quattro</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="Modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resim Detayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/Audi/audi9.webp" alt="Resim Detayı" class="img-fluid">
+                    
+                    <div class="caption"></div><p><b>Audi Q8</b></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#gallery-container"><button id="dip" class="btn btn-secondary" type="button">Başa Dön</button></a>
+            
+         
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          
+          
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">   
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+<script>
+  function galeriyiYaratma(resimler) {
+    const galleryContainer = document.getElementById('gallery-container');
+ let i = 0;
+    resimler.forEach(row => {
+      const rowDiv = document.createElement('div');
+      rowDiv.classList.add('row', 'mt-3');
+
+      row.forEach(image => {
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-md-4');
+
+        const imgElement = document.createElement('img');
+        imgElement.src = image.src;
+        imgElement.alt = image.alt;
+        imgElement.classList.add('img-fluid', 'gallery-img');
+        imgElement.setAttribute('data-toggle', 'modal');
+        imgElement.setAttribute('data-target', `#Modal${i+1}`);
+        imgElement.setAttribute('data-caption', image.caption);
+
+        colDiv.appendChild(imgElement);
+        rowDiv.appendChild(colDiv);
+        i++;
+      });
+
+      galleryContainer.appendChild(rowDiv);
+    });
+  }
+
+
+  const resimler = [
+    [
+      { src: 'images/Audi/audi1.jpg', alt: 'Resim 1', caption: 'Audi A1 Quattro'},
+      { src: 'images/Audi/audi2.jpg', alt: 'Resim 2', caption: 'Audi A2 Quattro' },
+      { src: 'images/Audi/audi3.jpg', alt: 'Resim 3', caption: 'Audi A3 Quattro' }
+    ],
+    [
+      { src: 'images/Audi/audi4.jpg', alt: 'Resim 4', caption: 'Audi A4 Qauttro' },
+      { src: 'images/Audi/audi5.jpg', alt: 'Resim 5', caption: 'Audi A5 Quattro' },
+      { src: 'images/Audi/audi6.jpg', alt: 'Resim 6', caption: 'Audi A6 Quattro' }
+    ],
+    [
+      { src: 'images/Audi/audi7.jpg', alt: 'Resim 7', caption: 'Audi A7 Quattro' },
+      { src: 'images/Audi/audi8.jpg', alt: 'Resim 8', caption: 'Audi A8 Quattro' },
+      { src: 'images/Audi/audi9.webp', alt: 'Resim 9', caption: 'Audi Q8' }
+    ]
+   
+  ];
+
+  galeriyiYaratma(resimler);
+  const images = document.querySelectorAll('.gallery-img');
+  images.forEach(img => {
+    img.addEventListener('mouseover', function() {
+      const caption = this.getAttribute('data-caption');
+      const modalCaption = document.querySelector('.modal-body .caption');
+      modalCaption.textContent = caption;
+    });
+  });
+  
+</script>
+</body>
+</html>
